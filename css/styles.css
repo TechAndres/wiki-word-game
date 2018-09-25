@@ -2,8 +2,12 @@
   background-color: #AFE5FF;
   height: 100vh;
 }
+#board-game{
+  transition: display 10s;
+}
+
 .row{
-  height: 100%;
+  height: 100vh;
 }
 .image-logo{
 
@@ -13,12 +17,11 @@
 }
 
 .start-bt{
-
   width: 300px;
   height: 300px;
   display: block;
-
 }
+
 .row-fluid{
   height: 100vh;
 }
@@ -37,7 +40,7 @@
 }
 
 
-#full-game{
+#start-count, #board-game{
   display: none;
 }
 
@@ -46,4 +49,16 @@
   margin: 0 auto;
   position: relative;
   top: 25%;
+  transition: display 20s;
+}
+
+.center-board-game{
+  display: block;
+  margin: 0 auto;
+}
+
+#board-image{
+  position: relative;
+  top:-1000px;
+  transition: all 1s;
 }
