@@ -1,0 +1,43 @@
+.container-fluid{
+  background-color: #AFE5FF;
+}
+
+.image-logo{
+
+    margin-left: 55px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.start-bt{
+
+  width: 300px;
+  height: 300px;
+  display: block;
+
+}
+.row-fluid{
+  height: 100vh;
+}
+#start-button{
+  display: block;
+  width: 350px;
+  height: 100px;
+  border-radius: 60px;
+  background-color: #FFB404;
+  color: white;
+  border:5px solid #FFB404;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 auto;
+  line-height: 50px;
+}
+
+
+#full-game{
+  display: none;
+}
+
+#theImg{
+  margin-top: 250px;
+}
