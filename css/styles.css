@@ -1,9 +1,13 @@
 .container-fluid{
-  background-color: #AFE5FF;
   height: 100vh;
 }
 #board-game{
   transition: display 10s;
+}
+
+#row-index{
+  background-image: url("../images/background-index.png");
+  background-size: contain;
 }
 
 .row{
@@ -26,7 +30,7 @@
   height: 100vh;
 }
 #start-button{
-  position: relative;
+  position: absolute;
   left: 25%;
   width: 350px;
   height: 100px;
@@ -37,6 +41,40 @@
   font-size: 50px;
   font-weight: bold;
   line-height: 50px;
+}
+
+#left-cono{
+  display: none;
+  position: absolute;
+  bottom: -320px;
+  left: -40px;
+  transition: all 0.1s;
+  z-index: 0;
+}
+
+#right-cono{
+  display: none;
+  position: absolute;
+  bottom: -320px;
+  right: 10px;
+  transition: all 0.1s;
+}
+
+#confeti{
+  position: absolute;
+  bottom: 150px;
+  left: -500px;
+  z-index: 1;
+  display: none;
+}
+
+#confeti2{
+  position: absolute;
+  bottom: 140px;
+  left: 660px;
+  z-index: 1;
+  display: none;
+
 }
 
 
@@ -61,4 +99,55 @@
   position: relative;
   top:-1000px;
   transition: all 1s;
+}
+
+
+#screen-letter{
+  position: absolute;
+  bottom: -500px;
+  right: 36%;
+  transition: bottom 1.2s;
+}
+
+
+#girl-stage{
+  position: absolute;
+  bottom: -500px;
+  right: 18%;
+  transition: bottom 1s;
+}
+
+#delete-b{
+  position: absolute;
+  bottom: -500px;
+  right: 29%;
+  transition: bottom 1s;
+}
+#ok-b{
+  position: absolute;
+  bottom: -500px;
+  right: 26.8%;
+  transition: bottom 1s;
+}
+#abc-b{
+  position: absolute;
+  bottom: -500px;
+  left: 24%;
+  transition: bottom 1s;
+}
+#mix-b{
+  position: absolute;
+  bottom: -500px;
+  left: 24%;
+  transition: bottom 1s;
+}
+
+#letters{
+  width: 510px;
+  height: 84px;
+  background: white;
+  position: absolute;
+  bottom: 22.7%;
+  right: 37.9%;
+  border-radius: 25px;
 }
