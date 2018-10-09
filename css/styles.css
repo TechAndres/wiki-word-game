@@ -1,3 +1,7 @@
+html{
+  overflow-y: hidden;
+}
+
 .container-fluid{
   height: 100vh;
 }
@@ -48,7 +52,7 @@
   position: absolute;
   bottom: -320px;
   left: -40px;
-  transition: all 0.1s;
+  transition: bottom 0.01s;
   z-index: 0;
 }
 
@@ -56,8 +60,8 @@
   display: none;
   position: absolute;
   bottom: -320px;
-  right: 10px;
-  transition: all 0.1s;
+  right: 0px;
+  transition: bottom 0.01s;
 }
 
 #confeti{
@@ -104,6 +108,10 @@
 .center-board-game{
   display: block;
   margin: 0 auto;
+}
+
+#board-match{
+
 }
 
 #board-image{
@@ -162,7 +170,9 @@
   right: 37.9%;
   border-radius: 25px;
   display: none;
+  outline:none;
 }
+
 
 #letters-up{
   width: 510px;
@@ -172,4 +182,5 @@
   bottom: 37%;
   right: 37.9%;
   border-radius: 25px;
+  outline:none;
 }

@@ -1,34 +1,33 @@
 var word =[];
+$("html").mousedown(function(e){ e.preventDefault(); });
+    // word and prevent the select of the div
 
+      // begining of the animation start when the arrow it on the button
 function startMouseover(){
   $("#start-button").mouseover(function(){
         $(this).html("ready");
-  $(this).css({"background-color":"#BDE517",border:"5px solid #D1FF17"});
-  $(this).click(function(){ $(this).css({border:"5px solid #D1FF17"})});
-  setTimeout(function(){
-    $("#left-cono").show();
-    $("#left-cono").animate({"bottom":"0px"});
-    $("#right-cono").show();
-    $("#right-cono").animate({"bottom":"0px"});
-  },10);
-
-});
+        $(this).css({"background-color":"#BDE517",border:"5px solid #D1FF17"});
+        $(this).click(function(){ $(this).css({border:"5px solid #D1FF17"})});
+        setTimeout(function(){
+          $("#left-cono").show();
+          $("#left-cono").animate({"bottom":"0px"});
+          $("#right-cono").show();
+          $("#right-cono").animate({"bottom":"0px"});
+        },10);
+      });
 }
+      // end
 
+      // begining of the animation start when the arrow it off the button
 function startMouseOut(){
   $("#start-button").mouseout(function(){
           $(this).html("start");
           $(this).css({"background-color":"#FFB404",border:"5px solid #FFB404"});
-          $("#left-cono").animate({"bottom":"-320px"});
-          $("#right-cono").animate({"bottom":"-320px"});
-          setTimeout(function(){
-            $("#right-cono").hide();
-            $("#left-cono").hide();
-          },300);
-
       });
 }
+    // end
 
+    // begining of the animation  when click the button start
 function clickButtonStart(){
   $("#start-button").click(function(){
     $("#start").prepend("<img id='confeti' src='./images/confeti.gif'/>");
@@ -52,6 +51,10 @@ function clickButtonStart(){
     })
 }
 
+// end
+
+// return to the index page when the button back is clickOn
+
 function clickButtonBack(){
   $("#back-button").click(function(){
               $("#confeti").hide();
@@ -65,6 +68,8 @@ function clickButtonBack(){
 
  });
 }
+
+//end
 
 function  boardGameAnimate(){
   $("#background-image-board").fadeIn(2000);
@@ -97,6 +102,25 @@ function stageGameAnimate(){
       $("#mix-b").animate({"bottom":"22%"});
 }
 
+
+function clickButtonOk(){
+  $("#ok-b").click(function(){
+    var wordjoin = word.join();
+    var answers = ["A1,M,A,R,T,E","A,M,A1,R","A1,M,A,R","R,A,M,A1","A,M,A1,R,T,E","R,A1,M,A","A1,M,A","A,M,A1"];
+    answers.forEach(function(rightw){
+      if (wordjoin===rightw){
+        $("#board-match").append(rightw);
+        console.log('yes')
+      }
+    });
+ });
+}
+
+function remove(array, element) {
+   const index = array.indexOf(element);
+   array.splice(index, 1);
+}
+
 function gameMatch1(){
    var letter_A = $("#letters").prepend("<img id='A' src='./images/A.png'/>").hide().fadeIn(1200);
     var letter_R = $("#letters").prepend("<img id='R' src='./images/R.png'/>").hide().fadeIn(1200);
@@ -104,6 +128,7 @@ function gameMatch1(){
     var letter_T = $("#letters").prepend("<img id='T' src='./images/T.png'/>").hide().fadeIn(1200);
     var letter_E = $("#letters").prepend("<img id='E' src='./images/E.png'/>").hide().fadeIn(1200);
     var letter_A1 = $("#letters").prepend("<img id='A1' src='./images/A.png'/>").hide().fadeIn(1200);
+
 
     function upLetter(id){
       $(`#${id}`).css({"position": "relative"});
@@ -117,6 +142,7 @@ function gameMatch1(){
             clicks++;
           }
           else{
+            remove(word,id);
             let x = $(`#${id}`).detach();
              $("#letters").append(x);
             clicks--;
@@ -130,14 +156,18 @@ function gameMatch1(){
     upLetter(`A1`);
     upLetter(`T`);
     upLetter(`E`);
+    clickButtonOk();
+
+
 
 }
 
-
 function deleteB(){
   $("#delete-b").click(function(){
-    console.log("lastcl" + lastcl);
-    $(lastcl).css({"bottom": "0px"});
+    let pop = word.pop();
+    let x1 = $(`#${pop}`).detach();
+     $("#letters").append(x1);
+
 });
 }
 
@@ -159,6 +189,7 @@ function setBoardGame(){
 
 
 $(document).ready(function(){
+
             startMouseover();
             startMouseOut();
             clickButtonStart();
