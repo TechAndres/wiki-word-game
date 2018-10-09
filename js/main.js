@@ -1,3 +1,5 @@
+var word =[];
+
 function startMouseover(){
   $("#start-button").mouseover(function(){
         $(this).html("ready");
@@ -58,12 +60,14 @@ function clickButtonBack(){
                $("#start").show();
                  $("#board-game").css("display","none");
                  $("#row-index").css("background-image","");
+                 $("#background-image-board").hide();
                  location.reload();
 
  });
 }
 
 function  boardGameAnimate(){
+  $("#background-image-board").fadeIn(2000);
   $("#board-image").animate( {"top":"10px"},function(){
       setTimeout(function(){
         $("#board-image").css({"transform":"rotate(20deg)"});
@@ -94,39 +98,38 @@ function stageGameAnimate(){
 }
 
 function gameMatch1(){
-    $("#letters").prepend("<img id='A' src='./images/A.png'/>").hide().fadeIn(1200);
-    $("#letters").prepend("<img id='N' src='./images/N.png'/>").hide().fadeIn(1200);
-    $("#letters").prepend("<img id='M' src='./images/M.png'/>").hide().fadeIn(1200);
-    $("#letters").prepend("<img id='T' src='./images/T.png'/>").hide().fadeIn(1200);
-    $("#letters").prepend("<img id='E' src='./images/E.png'/>").hide().fadeIn(1200);
-    $("#letters").prepend("<img id='A1' src='./images/A.png'/>").hide().fadeIn(1200);
+   var letter_A = $("#letters").prepend("<img id='A' src='./images/A.png'/>").hide().fadeIn(1200);
+    var letter_R = $("#letters").prepend("<img id='R' src='./images/R.png'/>").hide().fadeIn(1200);
+    var letter_M = $("#letters").prepend("<img id='M' src='./images/M.png'/>").hide().fadeIn(1200);
+    var letter_T = $("#letters").prepend("<img id='T' src='./images/T.png'/>").hide().fadeIn(1200);
+    var letter_E = $("#letters").prepend("<img id='E' src='./images/E.png'/>").hide().fadeIn(1200);
+    var letter_A1 = $("#letters").prepend("<img id='A1' src='./images/A.png'/>").hide().fadeIn(1200);
 
-lastcl ="";
     function upLetter(id){
-      $(id).css({"position": "relative"});
+      $(`#${id}`).css({"position": "relative"});
       var clicks = 0;
-        $(id).click(function(){
+        $(`#${id}`).click(function(){
           if(clicks == 0){
-            var index = $("#example div").index(this);
-            $(id).css({"bottom": "123px"});
-            lastcl=id;
+              let x = $(`#${id}`).detach();
+              $("#letters-up").append(x);
+              word.push(id);
+              console.log(word);
             clicks++;
-
           }
           else{
-            $(id).css({"bottom": "0px"});
-            lastcl=id;
+            let x = $(`#${id}`).detach();
+             $("#letters").append(x);
             clicks--;
           }
         });
     }
 
-    upLetter("#A");
-    upLetter("#N");
-    upLetter("#M");
-    upLetter("#A1");
-    upLetter("#T");
-    upLetter("#E");
+    upLetter(`A`);
+    upLetter(`R`);
+    upLetter(`M`);
+    upLetter(`A1`);
+    upLetter(`T`);
+    upLetter(`E`);
 
 }
 
@@ -138,11 +141,19 @@ function deleteB(){
 });
 }
 
+function arrayAnswer(compare){
+    answers = ["amarte","amar"];
+
+}
+
 function setBoardGame(){
+
       boardGameAnimate();
       stageGameAnimate();
       gameMatch1();
       deleteB();
+      arrayAnswer();
+
 }
 
 
@@ -152,5 +163,4 @@ $(document).ready(function(){
             startMouseOut();
             clickButtonStart();
             clickButtonBack();
-
 })

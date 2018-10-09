@@ -80,6 +80,17 @@
 
 #start-count, #board-game{
   display: none;
+  padding: 0;
+
+}
+
+#background-image-board{
+  position:absolute;
+  z-index:-1;
+  display:none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #theImg{
@@ -145,9 +156,20 @@
 #letters{
   width: 510px;
   height: 84px;
+  background: #ff7f6c;
+  position: absolute;
+  bottom: 24.5%;
+  right: 37.9%;
+  border-radius: 25px;
+  display: none;
+}
+
+#letters-up{
+  width: 510px;
+  height: 84px;
   background: white;
   position: absolute;
-  bottom: 22.7%;
+  bottom: 37%;
   right: 37.9%;
   border-radius: 25px;
 }
