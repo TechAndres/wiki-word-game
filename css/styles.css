@@ -189,23 +189,15 @@ html{
 #answers-board{
   position: absolute;
   right: 30%;
-  top:11%;
+  top:18%;
   z-index: 1 ;
   width: 800px;
   height: 250px;
   padding: 20px;
 }
 
-
-.tres{
-width: 110px;
-height: 30px;
-background-color: #fe5151;
-margin-bottom: 15px;
-margin-left: 10px;
-margin: 10px auto;
-text-align: center;
-
+.num{
+  display: inline-block;
 }
 
 .cuatro{
@@ -216,6 +208,10 @@ text-align: center;
   margin-left: 10px;
   margin: 10px auto;
   text-align: center;
+  color: #fe5151;
+  font-size: 26px;
+  line-height: 1;
+
 }
 
 
@@ -226,6 +222,10 @@ text-align: center;
   margin-bottom: 15px;
   margin: 10px auto;
   text-align: center;
+  color: #fe5151;
+  font-size: 26px;
+  line-height: 1;
+
   }
 
 .seis{
@@ -235,6 +235,10 @@ text-align: center;
   margin-bottom: 15px;
   margin: 10px auto;
   text-align: center;
+  color: #fe5151;
+font-size: 26px;
+line-height: 1;
+
 }
 
 .title-word{
@@ -262,4 +266,20 @@ text-align: center;
   position: absolute;
   bottom: 17%;
   left: 16%;
+}
+
+#score{
+  position: absolute;
+  bottom: 0.5%;
+  left: 45%;
+  background: red;
+  font-size: 60px;
+  width: 120px;
+  height: 120px;
+  border: 10px solid grey;
+  background: #fff900;
+  border-radius: 50%;
+  text-align: center;
+  color: grey;
+  font-weight: bold;
 }
