@@ -184,3 +184,75 @@ html{
   border-radius: 25px;
   outline:none;
 }
+
+
+#answers-board{
+  position: absolute;
+  right: 30%;
+  top:11%;
+  z-index: 1 ;
+  width: 800px;
+  height: 250px;
+  padding: 20px;
+}
+
+
+.tres{
+width: 110px;
+height: 30px;
+background-color: #fe5151;
+margin-bottom: 15px;
+margin-left: 10px;
+margin: 10px auto;
+text-align: center;
+
+}
+
+.cuatro{
+  width: 140px;
+  height: 30px;
+  background-color: #fe5151;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+.cinco{
+  width: 160px;
+  height: 30px;
+  background-color: #fe5151;
+  margin-bottom: 15px;
+  margin: 10px auto;
+  text-align: center;
+  }
+
+.seis{
+  width: 200px;
+  height: 30px;
+  background-color: #fe5151;
+  margin-bottom: 15px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.title-word{
+    font-size: 30px;
+    background-color:white;
+    border: 3px solid #fe5151;
+    color: #fe5151;;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.answers-num{
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  margin-left: 5px;
+}

@@ -139,13 +139,17 @@ function gameMatch1(){
               $("#letters-up").append(x);
               word.push(id);
               console.log(word);
+              console.log(clicks);
+
             clicks++;
           }
           else{
             remove(word,id);
             let x = $(`#${id}`).detach();
              $("#letters").append(x);
+             console.log(clicks);
             clicks--;
+
           }
         });
     }
@@ -157,8 +161,6 @@ function gameMatch1(){
     upLetter(`T`);
     upLetter(`E`);
     clickButtonOk();
-
-
 
 }
 
