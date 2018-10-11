@@ -94,10 +94,11 @@ function  boardGameAnimate(){
 }
 
 function stageGameAnimate(){
-      $("#screen-letter").animate({"bottom":"20px"});
+      $("#screen-letter").animate({"bottom":"14%", "left": "33%"});
+
       $("#girl-stage").animate({"bottom":"120px"});
-      $("#delete-b").animate({"bottom":"361px"});
-      $("#ok-b").animate({"bottom":"22%"});
+      $("#delete-b").animate({"bottom":"27.7%"});
+      $("#ok-b").animate({"bottom":"15.4%"});
       $("#abc-b").animate({"bottom":"361px"});
       $("#mix-b").animate({"bottom":"22%"});
 }

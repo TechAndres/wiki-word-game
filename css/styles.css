@@ -139,13 +139,13 @@ html{
 #delete-b{
   position: absolute;
   bottom: -500px;
-  right: 29%;
+  right: 29.7%;
   transition: bottom 1s;
 }
 #ok-b{
   position: absolute;
   bottom: -500px;
-  right: 26.8%;
+  right: 27%;
   transition: bottom 1s;
 }
 #abc-b{
@@ -166,7 +166,7 @@ html{
   height: 84px;
   background: #ff7f6c;
   position: absolute;
-  bottom: 24.5%;
+  bottom: 16%;
   right: 37.9%;
   border-radius: 25px;
   display: none;
@@ -179,7 +179,7 @@ html{
   height: 84px;
   background: white;
   position: absolute;
-  bottom: 37%;
+  bottom: 28.4%;
   right: 37.9%;
   border-radius: 25px;
   outline:none;
@@ -255,4 +255,11 @@ text-align: center;
   width: 180px;
   height: 180px;
   margin-left: 5px;
+}
+
+
+#boy{
+  position: absolute;
+  bottom: 17%;
+  left: 16%;
 }
